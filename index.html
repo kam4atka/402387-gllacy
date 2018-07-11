@@ -10,10 +10,27 @@
 	  		<div class="header-line">
 	  			<div class="header-block">
 			  		<img class="header-logo" src="https://placehold.it/155x65" width="155" height="65" alt="Логотип компании">
-			  		<nav class="user-navigation">
-				  		<ul>
+			  		<nav>
+				  		<ul class="catalog-navigation">
 				  			<li>
-				  				<a href=#>Каталог</a>
+				  				<a>Каталог</a>
+				  				<ul class="catalog-list">
+				  					<li class="catalog-item catalog-item-new">
+				  						<a href="#">Новинки</a>
+				  					</li>
+				  					<li class="catalog-item">
+				  						<a href="catalog.html">Сливочное</a>
+				  					</li>
+				  					<li class="catalog-item">
+				  						<a href="#">Щербеты</a>
+				  					</li>
+				  					<li class="catalog-item">
+				  						<a href="#">Фруктовый лед</a>
+				  					</li>
+				  					<li class="catalog-item">
+				  						<a href="#">Мелорин</a>
+				  					</li>
+				  				</ul>
 				  			</li>
 				  			<li>
 				  				<a href=#>Доставка и оплата</a>
@@ -28,8 +45,25 @@
 			  		<div class="header-search">
 			  			<a href="#">Поиск</a>
 			  		</div>
+			  		<div class="header-search-block">
+			  			<form action="https://echo.htmlacademy.ru" method="post">
+			  				<label class="search-label" for="search-phrase">Что ищем?</label>
+			  				<input class="search-input" type="text" name="search-phrase" id="search-phrase">
+			  			</form>
+			  		</div>
 			  		<div class="header-login">
 			  			<a href="#">Вход</a>
+			  		</div>
+			  		<div class="header-login-block">
+			  			<form action="https://echo.htmlacademy.ru" method="post">
+		  					<label class="login-label" for="login-email">Электронная почта</label>
+		  					<input class="login-input" type="email" name="login-email" id="login-email">
+		  					<label class="login-label" for="login-password">Пароль</label>
+		  					<input class="login-input" type="password" name="login-password" id="login-password">
+		  					<button class="button login-button login-send" type="submit">Войти</button>
+		  					<a class="login-restore" href="#">Забыли пароль?</a>
+		  					<a class="login-registration" href="#">Новая регистрация</a>
+			  			</form>
 			  		</div>
 			  		<div class="header-card">
 			  			<a href="#">Корзина</a>
@@ -49,18 +83,36 @@
 	  		<h1 class="visually-hidden">Интернет-магазин мороженного</h1>
 	  		<section class="slider">
 	  			<h2 class="visually-hidden">Слайдер популярных товаров</h2>
+					<div class="slider-item">
+						<img src="https://placehold.it/330x500" alt="Крем-брюле" width="330" height="500">
+						<img src="https://placehold.it/330x500" alt="Пломбир с малиновым джемом" width="330" height="500">
+						<p class="slider-title">Крем-брюле и пломбир с малиновым джемом</p>
+						<a class="button slider-button" href="#">Давайте оба!</a>
+					</div>
+					<div class="slider-item">
+						<img src="https://placehold.it/330x500" alt="Шоколадный пломбир" width="330" height="500">
+						<img src="https://placehold.it/330x500" alt="Лимонный сорбет" width="330" height="500">
+						<p class="slider-title">Шоколадный пломбир и лимонный сорбет</p>
+						<a class="button slider-button" href="#">Давайте оба!</a>
+					</div>
+					<div class="slider-item">
+						<img src="https://placehold.it/330x500" alt="Пломбир с помадкой" width="330" height="500">
+						<img src="https://placehold.it/330x500" alt="Клубничный щербет" width="330" height="500">
+						<p class="slider-title">Пломбир с помадкой и клубничный щербет</p>
+						<a class="button slider-button" href="#">Давайте оба!</a>
+					</div>
 	  		</section>
 	  		<section class="special">
 	  			<h2 class="visually-hide">Специальные предложения</h2>
 	  			<div class="special-offer">
 	  				<h3>Малинка даром!</h3>
 	  				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-	  				<a href="#">Хочу варенье!</a>
+	  				<a class="button" href="#">Хочу варенье!</a>
 	  			</div>
 	  			<div class="special-offer">
 	  				<h3>Шоколадки даром!</h3>
 	  				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-	  				<a href="#">Хочу шоколадки!</a>
+	  				<a class="button" href="#">Хочу шоколадки!</a>
 	  			</div>
 	  		</section>
 	  		<section class="hits">
@@ -119,7 +171,7 @@
 	  					</p>
 	  					<form action="https://echo.htmlacademy.ru" method="post">
 	  						<input class="subcsription-input" type="email" name="email" placeholder="Электронная почта">
-	  						<button class="subcsription-send" type="submit">Отправить</button>
+	  						<button class="button subcsription-send" type="submit">Отправить</button>
 	  					</form>
 	  				</div>
 	  			</div>
@@ -135,7 +187,7 @@
   					<a href="tel:+78124502525">8 812 450-25-25</a>
   				</p>
   				<p class="legend-schedule">(С 10 до 20, ежедневно)</p>
-  				<a class="legend-contact" href="#">Форма обратной связи</a>
+  				<a class="button legend-contact" href="#">Форма обратной связи</a>
   			</div>
   		</section>
   	</main>
@@ -165,5 +217,17 @@
 	  		</div>
 	  	</div>
   	</footer>
+  	<div class="modal modal-send">
+  		<h2>Мы обязательно вам ответим!</h2>
+  		<form action="https://echo.htmlacademy.ru" method="post">
+  			<label class="writeus-label" for="writeus-name">Как вас зовут?</label>
+  			<input class="writeus-input" type="text" name="writeus-name" id="writeus-name">
+  			<label class="writeus-label" for="writeus-email">Ваша почта для ответа?</label>
+  			<input class="writeus-input" type="email" name="writeus-email" id="writeus-email">
+  			<textarea class="writeus-text" name="writeus-text" placeholder="Напишите что нибудь.."></textarea>
+  			<button class="button writeus-send" type="submit">Отправить</button>
+  			<button class="writeus-close" type="button">Закрыть</button>
+  		</form>
+  	</div>
   </body>
 </html>
