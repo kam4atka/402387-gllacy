@@ -53,7 +53,7 @@ img {
 .button {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 12px 25px;
+	padding: 6% 4%;
 	border: none;
 	border-radius: 25px;
 	background-color: #e84d37;
@@ -269,6 +269,7 @@ img {
 	vertical-align: middle;
 	width: 21px;
 	height: 21px;
+	margin-right: 5px;
 	font-size: 0;
 	border: 2px solid #ffffff;
 	border-radius: 50%;
@@ -676,7 +677,7 @@ img {
 	min-width: 900px;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 10px 25px 0 25px;
+	padding: 0.4% 1.2%;
 }
 
 .header-line {
@@ -689,7 +690,6 @@ img {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	width: 50%;
 }
 
 .user-block,
@@ -698,7 +698,11 @@ img {
 }
 
 .header-logo {
-	margin-right: 25px;
+	margin-right: 12px;
+}
+
+.site-navigation {
+	margin-top: 1%;
 }
 
 .site-menu {
@@ -707,7 +711,7 @@ img {
 }
 
 .site-menu-item:not(:last-child) {
-	margin-right: 15px;
+	padding-right: 2.4%;
 }
 
 .site-menu-item-outer {
@@ -926,6 +930,7 @@ img {
 
 .login-send {
 	margin-right: 20px;
+	padding: 10px 25px;
 }
 
 .header-login-link {
@@ -1043,12 +1048,16 @@ img {
 	color: #ffffff;
 }
 
+.header-schedule {
+	margin-bottom: 5px;
+}
+
 .slider {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	min-height: 485px;
-	margin-bottom: 35px;
+	min-height: 475px;
+	margin-bottom: 40px;
 }
 
 .slider-controls {
@@ -1069,17 +1078,17 @@ img {
 
 .slider-image {
 	position: absolute;
-	top: 15px;
+	top: 5px;
 }
 
 .slider-image:first-child {
-	left: 25%;
+	right: 47%;
 	z-index: -1;
 	transform: scale(1.2);
 }
 
 .slider-image:not(:first-child) {
-	right: 23%;
+	left: 50%;
 	z-index: -2;
 }
 
@@ -1119,19 +1128,19 @@ img {
 .slider-button {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 11px 40px 13px 40px;
+	padding: 6px 40px 16px 40px;
 	border-radius: 45px;
 }
 
 .special {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	margin-bottom: 35px;
 }
 
 .special-offer {
 	width: 49%;
-	padding: 18px;
+	padding: 2%;
 	border-radius: 15px;
 }
 
@@ -1148,19 +1157,23 @@ img {
 }
 
 .special-title {
-	margin-bottom: 15px;
+	margin-bottom: 4%;
 }
 
 .special-description {
-	margin-bottom: 45px;
+	margin-bottom: 6%;
 }
 
 .special-block {
 	text-align: right;
 }
 
+.special-button {
+	padding: 6px 23px 12px 23px;
+}
+
 .hits {
-	margin-bottom: 35px;
+	margin-bottom: 40px;
 }
 
 .hits-list {
@@ -1172,7 +1185,7 @@ img {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	width: 24%;
 	padding-top: 10px;
@@ -1180,8 +1193,8 @@ img {
 
 .hits-item::before {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 10px;
+	left: 5px;
 	width: 60px;
 	height: 60px;
 	content: "";
@@ -1191,13 +1204,15 @@ img {
 }
 
 .hit-image {
-	margin-bottom: 15px;
+	width: 97%;
+	height: 97%;
+	margin-bottom: 10px;
 }
 
 .hit-price {
 	position: absolute;
-	bottom: 65px;
-	left: 0;
+	bottom: 80px;
+	left: 3px;
 }
 
 .hits-item:hover .hit-overlay {
@@ -1209,7 +1224,7 @@ img {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 120%;
+	height: 125%;
 	padding: 0 10px 15px 10px;
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 4px;
@@ -1232,13 +1247,13 @@ img {
 	z-index: 2;
 }
 
-.hit-price {
-	width: 265px;
+.hits-item:hover::before {
+	z-index: 3;
 }
 
 .aboutus {
-	margin-bottom: 35px;
-	padding: 30px 20px;
+	margin-bottom: 40px;
+	padding: 25px 17px;
 }
 
 .aboutus-title {
@@ -1250,18 +1265,18 @@ img {
 	flex-wrap: wrap;
 }
 
+.aboutus-block:not(:last-child) {
+	margin-bottom: 20px;
+}
+
 .aboutus-advantage {
 	position: relative;
 	width: 49%;
-	padding-left: 57px;
+	padding-left: 7%;
 }
 
 .aboutus-advantage:nth-of-type(2n) {
-	margin-left: 20px;
-}
-
-.aboutus-advantage:first-child {
-	margin-bottom: 20px;
+	margin-left: 2%;
 }
 
 .advantage-production::before,
@@ -1296,7 +1311,7 @@ img {
 .blogs {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	margin-bottom: 35px;
 }
 
 .news-item,
@@ -1306,15 +1321,14 @@ img {
 	border-radius: 15px;
 }
 
-.news-item,
-.subscription-wrapper {
-	padding: 28px 20px;
+.news-item {
+	padding: 2.5%;
 }
 
 .news-item {
 	background-image: url("../img/bg-strawberry.png");
 	background-repeat: no-repeat;
-	background-position: 17% 38%;
+	background-position: 49% 39%;
 }
 
 .news-block {
@@ -1323,17 +1337,22 @@ img {
 	padding: 0;
 }
 
+.news-status {
+	margin-bottom: 1.2%;
+}
+
 .subscription-wrapper {
 	width: 98%;
 	height: 95%;
 	margin: auto;
 	margin-top: 5px;
+	padding: 7% 4% 5% 6%;
 	background-color: #f8f7f4;
 	border-radius: 15px;
 }
 
 .subscription-description {
-	margin-bottom: 35px;
+	margin-bottom: 4%;
 }
 
 .subscription-form {
@@ -1342,7 +1361,7 @@ img {
 }
 
 .subscription-input {
-	width: 100%;
+	width: 71%;
 	height: 45px;
 	margin-right: 10px;
 	padding-left: 10px;
@@ -1358,6 +1377,10 @@ img {
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
+.map-iframe {
+	width: 100%;
+}
+
 .map-wrapper {
 	position: absolute;
 	top: 0;
@@ -1371,19 +1394,30 @@ img {
 
 .map-legend {
 	position: absolute;
-	top: 65px;
-	right: 25px;
-	width: 25%;
-	padding: 30px 20px;
+	top: 15%;
+	right: 2%;
+	width: 305px;
+	padding: 30px 27px;
+	border-radius: 15px;
 	z-index: 1;
 }
 
 .legend-address {
-	margin-bottom: 20px;
+	margin-bottom: 8%;
+}
+
+.legend-phone {
+	margin-bottom: 2%;
 }
 
 .legend-schedule {
-	margin-bottom: 25px;
+	margin-bottom: 9%;
+}
+
+.legend-contact {
+	width: 100%;
+	padding: 10px 25px;
+	text-align: center;
 }
 
 .main-aside {
@@ -1637,13 +1671,26 @@ img {
 	color: #323232;
 }
 
+.main-footer {
+	max-width: 1200px;
+	max-height: 900px;
+	margin: 0 auto;
+	padding: 18px 1.1%;
+}
+
 .footer-line {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-end;
+}
+
+.footer-social {
+	width: 22%;
+	align-self: flex-end;
 }
 
 .social-list {
+	align-self: center;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -1662,7 +1709,7 @@ img {
 }
 
 .social-item:not(:last-child) {
-	margin-right: 15px;
+	margin-right: 6%;
 }
 
 .social-twitter::before,
@@ -1704,6 +1751,12 @@ img {
 	background-image: url("../img/social-vk.svg")
 }
 
+.footer-navigation {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1%;
+}
+
 .provider-like {
 	position: relative;
 }
@@ -1718,16 +1771,6 @@ img {
 	background-image: url("../img/icon-heart.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
-}
-
-.main-footer {
-	padding: 20px 0;
-}
-
-.footer-navigation {
-	display: flex;
-	flex-wrap: wrap;
-
 }
 
 .footer-navigation ul:not(:last-child) {
