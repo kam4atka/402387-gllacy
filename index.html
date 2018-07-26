@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глэйси</title>
@@ -14,38 +14,41 @@
 			  		<img class="header-logo" src="img/logo-header.svg" width="155" height="65" alt="Логотип компании">
 			  		<nav class="site-navigation">
 				  		<ul class="site-menu">
-				  			<li class="site-menu-item site-menu-open">
-				  				<a class="site-menu-item-outer" href="#">
+				  			<li class="site-menu-item">
+				  				<a class="site-menu-open site-menu-item-outer" href="#">
 				  					<span class="site-menu-item-inner">Каталог</span>
 				  				</a>
-				  				<ul class="site-submenu">
-				  					<li class="site-submenu-item site-submenu-new">
-				  						<a class="site-submenu-item-outer" href="#">
-				  							<span class="site-submenu-item-inner">Новинки</span>
-				  						</a>
-				  					</li>
-				  					<li class="site-submenu-item">
-				  						<a class="site-submenu-item-outer" href="catalog.html">
-				  							<span class="site-submenu-item-inner">Сливочное</span>
-				  						</a>
-				  					</li>
-				  					<li class="site-submenu-item">
-				  						<a class="site-submenu-item-outer" href="#">
-				  							<span class="site-submenu-item-inner">Щербеты</span>
-				  						</a>
-				  					</li>
-				  					<li class="site-submenu-item">
-				  						<a class="site-submenu-item-outer" href="#">
-				  							<span class="site-submenu-item-inner">Фруктовый лед</span>
-				  						</a>
-				  					</li>
-				  					<li class="site-submenu-item">
-				  						<a class="site-submenu-item-outer" href="#">
-				  							<span class="site-submenu-item-inner">Мелорин</span>
-				  						</a>
-				  					</li>
-				  				</ul>
+				  				<div class="site-submenu-wrapper hide">
+					  				<ul class="site-submenu">
+					  					<li>
+					  						<a class="site-submenu-item site-submenu-new" href="#">
+					  							<span class="site-submenu-item-inner">Новинки</span>
+					  						</a>
+					  					</li>
+					  					<li>
+					  						<a class="site-submenu-item" href="catalog.html">
+					  							<span class="site-submenu-item-inner">Сливочное</span>
+					  						</a>
+					  					</li>
+					  					<li>
+					  						<a class="site-submenu-item" href="#">
+					  							<span class="site-submenu-item-inner">Щербеты</span>
+					  						</a>
+					  					</li>
+					  					<li>
+					  						<a class="site-submenu-item" href="#">
+					  							<span class="site-submenu-item-inner">Фруктовый лед</span>
+					  						</a>
+					  					</li>
+					  					<li>
+					  						<a class="site-submenu-item" href="#">
+					  							<span class="site-submenu-item-inner">Мелорин</span>
+					  						</a>
+					  					</li>
+					  				</ul>
+					  			</div>
 				  			</li>
+
 				  			<li class="site-menu-item">
 				  				<a class="site-menu-item-outer" href=#>
 				  					<span class="site-menu-item-inner">Доставка и оплата</span>
@@ -61,8 +64,8 @@
 			  	</div>
 			  	<div class="header-block user-block">
 			  		<div class="header-search">
-			  			<a href="#">Поиск</a>
-							<div class="header-search-wrapper">
+				  		<a class="header-search-link" href="#" aria-label="Поиск">Поиск</a>
+							<div class="header-search-wrapper hide">
 				  			<div class="header-search-block">
 					  			<form action="https://echo.htmlacademy.ru" method="post">
 					  				<label class="visually-hidden" for="search-phrase">Введите фразу для поиска</label>
@@ -70,10 +73,10 @@
 					  			</form>
 				  			</div>
 				  		</div>
-			  		</div>
+				  	</div>
 			  		<div class="header-login">
-		  				<a href="#">Вход</a>
-							<div class="header-login-wrapper">
+		  				<a class="header-login-link" href="#">Вход</a>
+							<div class="header-login-wrapper hide">
 				  			<div class="header-login-block">
 					  			<form action="https://echo.htmlacademy.ru" method="post">
 				  					<label class="visually-hidden" for="login-email">Электронная почта</label>
@@ -251,7 +254,7 @@
 	  	</div>
   		<section class="map">
   			<h2 class="visually-hidden">Место нахождения главного офиса на карте</h2>
-  			<iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/-/CBufeRXZ3A" height="430"></iframe>
+  			<!-- <iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/-/CBufeRXZ3A" height="430"></iframe> -->
   			<div class="map-wrapper">
 	  			<div class="map-legend">
 	  				<p class="legend-address-title">Адрес главного офиса<br>и офлайн-магазина:</p>
@@ -264,23 +267,36 @@
 	  				<a class="button legend-contact" href="#">Форма обратной связи</a>
 	  			</div>
 	  		</div>
+	  		<div class="modal writeus hide">
+	  			<h2 class="visually-hidden">Форма обратной связи</h2>
+	  			<p class="writeus-title">Мы обязательно вам ответим!</p>
+	  			<form class="writeus-form" action="https://echo.htmlacademy.ru" method="post">
+	  				<label class="writeus-label visually-hidden" for="writeus-name">Как вас зовут?</label>
+	  				<input class="writeus-input" type="text" name="writeus-name" id="writeus-name" placeholder="Как вас зовут?">
+	  				<label class="writeus-label visually-hidden" for="writeus-email">Ваша почта для ответа?</label>
+	  				<input class="writeus-input" type="email" name="writeus-email" id="writeus-email" placeholder="Ваша почта для ответа?">
+	  				<textarea class="writeus-text" name="writeus-text" placeholder="Напишите что нибудь.."></textarea>
+	  				<button class="button writeus-send" type="submit">Отправить</button>
+	  				<button class="modal-close" type="button">Закрыть</button>
+	  			</form>
+	  		</div>
   		</section>
   	</main>
   	<footer class="main-footer">
   		<div class="footer-line">
 	  		<div class="footer-social">
 	  			<ul class="social-list">
-	  				<li class="social-item social-twitter">
-	  					<a href="#">twitter</a>
+	  				<li>
+	  					<a class="social-item social-twitter" href="#">twitter</a>
 	  				</li>
-	  				<li class="social-item social-instagram">
-	  					<a href="#">instagram</a>
+	  				<li>
+	  					<a class="social-item social-instagram" href="#">instagram</a>
 	  				</li>
-	  				<li class="social-item social-facebook">
-	  					<a href="#">facebook</a>
+	  				<li>
+	  					<a class="social-item social-facebook" href="#">facebook</a>
 	  				</li>
-	  				<li class="social-item social-vk">
-	  					<a href="#">vk</a>
+	  				<li>
+	  					<a class="social-item social-vk" href="#">vk</a>
 	  				</li>
 	  			</ul>
 	  		</div>
@@ -304,22 +320,11 @@
 	  		</div>
 	  		<div class="footer-developer">
 	  			<img src="img/logo-developer.svg" width="125" height="40" alt="Логотип разработчика сайта">
-	  			<a class="developer-title link" href="https://htmlacademy.ru" target="_blank">Сделано в <span>HTML Academy</span> © 2017</a>
+	  			<a class="developer-title link" href="https://htmlacademy.ru" target="_blank">Шаблон <span>HTML Academy</span> © 2017</a>
 	  		</div>
 	  	</div>
   	</footer>
-  	<div class="modal writeus hide">
-  		<h2 class="visually-hidden">Форма обратной связи</h2>
-  		<p class="writeus-title">Мы обязательно вам ответим!</p>
-  		<form class="writeus-form" action="https://echo.htmlacademy.ru" method="post">
-  			<label class="writeus-label visually-hidden" for="writeus-name">Как вас зовут?</label>
-  			<input class="writeus-input" type="text" name="writeus-name" id="writeus-name" placeholder="Как вас зовут?">
-  			<label class="writeus-label visually-hidden" for="writeus-email">Ваша почта для ответа?</label>
-  			<input class="writeus-input" type="email" name="writeus-email" id="writeus-email" placeholder="Ваша почта для ответа?">
-  			<textarea class="writeus-text" name="writeus-text" placeholder="Напишите что нибудь.."></textarea>
-  			<button class="button writeus-send" type="submit">Отправить</button>
-  			<button class="modal-close" type="button">Закрыть</button>
-  		</form>
-  	</div>
+  	<div class="modal-overlay hide"></div>
+  	<script src="js/script.js"></script>
   </body>
 </html>
