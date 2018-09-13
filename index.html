@@ -85,7 +85,7 @@
 				  					<input class="login-input" type="password" name="login-password" id="login-password" placeholder="Пароль">
 										<div class="header-login-container">
 						  				<button class="button login-button login-send" type="submit">Войти</button>
-					  					<div class="header-login-link">
+					  					<div class="header-login-links">
 						  					<a class="login-restore" href="#">Забыли пароль?</a>
 						  					<a class="login-registration" href="#">Новая регистрация</a>
 					  					</div>
@@ -95,7 +95,7 @@
 					  	</div>
 			  		</div>
 			  		<div class="header-card header-card-empty">
-			  			<a href="#">Пусто</a>
+			  			<a class="header-card-link" href="#">Пусто</a>
 			  		</div>
 		  		</div>
 		  	</div>
@@ -171,7 +171,7 @@
 	  			<div class="hits-list">
 	  				<div class="hits-item">
 	  					<div class="hit-overlay">
-	  						<a class="button hits-item-view hide" href="#">Быстрый просмотр</a>
+	  						<a class="button hits-button hits-item-view hide" href="#">Быстрый просмотр</a>
 	  					</div>
 	  					<div class="hit-wrapper">
 	  						<div class="hit-image-wrapper">
@@ -183,7 +183,7 @@
 	  				</div>
 	  				<div class="hits-item">
 	  					<div class="hit-overlay">
-	  						<a class="button hits-item-view hide" href="#">Быстрый просмотр</a>
+	  						<a class="button hits-button hits-item-view hide" href="#">Быстрый просмотр</a>
 	  					</div>
 	  					<div class="hit-wrapper">
 	  						<div class="hit-image-wrapper">
@@ -195,7 +195,7 @@
 	  				</div>
 	  				<div class="hits-item">
 	  					<div class="hit-overlay">
-	  						<a class="button hits-item-view hide" href="#">Быстрый просмотр</a>
+	  						<a class="button hits-button hits-item-view hide" href="#">Быстрый просмотр</a>
 	  					</div>
 	  					<div class="hit-wrapper">
 	  						<div class="hit-image-wrapper">
@@ -207,7 +207,7 @@
 	  				</div>
 	  				<div class="hits-item">
 	  					<div class="hit-overlay">
-	  						<a class="button hits-item-view hide" href="#">Быстрый просмотр</a>
+	  						<a class="button hits-button hits-item-view hide" href="#">Быстрый просмотр</a>
 	  					</div>
 	  					<div class="hit-wrapper">
 	  						<div class="hit-image-wrapper">
@@ -245,7 +245,8 @@
 	  						Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
 	  					</p>
 	  					<form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-	  						<input class="subscription-input" type="email" name="email" placeholder="Электронная почта">
+	  						<label class="subscription-label" for="subscription-email">Введите Ваш e-mail</label>
+	  						<input class="subscription-input" type="email" name="email" id="subscription-email" placeholder="Электронная почта">
 	  						<button class="button subscription-send" type="submit">Отправить</button>
 	  					</form>
 	  				</div>
@@ -254,7 +255,7 @@
 	  	</div>
   		<section class="map">
   			<h2 class="visually-hidden">Место нахождения главного офиса на карте</h2>
-  			<!-- <iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/-/CBufeRXZ3A" height="430"></iframe> -->
+  			<iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/-/CBufeRXZ3A" height="430"></iframe>
   			<div class="map-wrapper">
 	  			<div class="map-legend">
 	  				<p class="legend-address-title">Адрес главного офиса<br>и офлайн-магазина:</p>
@@ -272,10 +273,10 @@
 	  			<p class="writeus-title">Мы обязательно вам ответим!</p>
 	  			<form class="writeus-form" action="https://echo.htmlacademy.ru" method="post">
 	  				<label class="writeus-label visually-hidden" for="writeus-name">Как вас зовут?</label>
-	  				<input class="writeus-input" type="text" name="writeus-name" id="writeus-name" placeholder="Как вас зовут?">
+	  				<input class="writeus-input writeus-name" type="text" name="writeus-name" id="writeus-name" placeholder="Как вас зовут?">
 	  				<label class="writeus-label visually-hidden" for="writeus-email">Ваша почта для ответа?</label>
-	  				<input class="writeus-input" type="email" name="writeus-email" id="writeus-email" placeholder="Ваша почта для ответа?">
-	  				<textarea class="writeus-text" name="writeus-text" placeholder="Напишите что нибудь.."></textarea>
+	  				<input class="writeus-input writeus-email" type="email" name="writeus-email" id="writeus-email" placeholder="Ваша почта для ответа?">
+	  				<textarea class="writeus-text writeus-text" name="writeus-text" placeholder="Напишите что нибудь.."></textarea>
 	  				<button class="button writeus-send" type="submit">Отправить</button>
 	  				<button class="modal-close" type="button">Закрыть</button>
 	  			</form>
