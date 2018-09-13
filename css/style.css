@@ -867,7 +867,8 @@ img {
 	position: relative;
 	width: 35px;
 	height: 35px;
-	margin-top: -10px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
 }
 
 .header-search-link {
@@ -876,12 +877,11 @@ img {
 	height: 100%;
 	margin-top: -5px;
 	font-size: 0;
-	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 50%;
+	
 }
 
-.header-search-link:hover,
-.header-search-link:focus {
+.header-search:hover,
+.header-search:focus {
 	background-color: rgba(255, 255, 255, 1);
 	outline: none;
 }
@@ -890,16 +890,16 @@ img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 18px;
-	height: 18px;
+	width: 35px;
+	height: 35px;
 	content: "";
 	background-image: url('../img/icon-search.svg');
 	background-repeat: no-repeat;
-	transform: translate(-50%, -25%);
+	transform: translate(-25%, -25%);
 }
 
-.header-search-link:hover::before,
-.header-search-link:focus::before {
+.header-search:hover .header-search-link::before,
+.header-search:focus .header-search-link::before {
 	background-image: url('../img/icon-search-hover.svg');
 }
 
@@ -962,7 +962,8 @@ img {
 
 .header-login-link:hover,
 .header-login-link:focus,
-.header-login:hover .header-login-link {
+.header-login:hover .header-login-link,
+.header-login:focus .header-login-link {
 	color: #323232;
 	outline: none;
 }
@@ -1169,6 +1170,7 @@ img {
 	margin-bottom: 5px;
 }
 
+.header-phone:hover,
 .header-phone:focus {
 	color: #323232;
   outline: none;
@@ -1251,6 +1253,7 @@ img {
 .slider-title {
 	width: 670px;
 	margin: 0 auto;
+	margin-top: 250px;
 	margin-bottom: 30px;
 	overflow: hidden;
 }
@@ -1259,7 +1262,7 @@ img {
 	display: inline-block;
 	vertical-align: middle;
 	max-width: 500px;
-	padding: 8px 40px 10px 40px;
+	padding: 8px 40px 10px 43px;
 	border-radius: 45px;
 	overflow: hidden;
 }
@@ -1351,7 +1354,6 @@ img {
 
 .hit-image {
 	width: 97%;
-	height: 97%;
 }
 
 .hit-price {
@@ -1832,6 +1834,11 @@ img {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.catalog-item-title span:hover,
+.catalog-item-title span:focus {
+	border-bottom: 1px solid rgba(232, 77, 55, 1);
+}
+
 .catalog-item:hover .catalog-item-overlay {
 	display: flex;
 	flex-direction: column;
@@ -1914,20 +1921,20 @@ img {
 }
 
 .page-prev-icon {
+	opacity: 0.2;
 	transform: translate(-50%, -50%) rotate(180deg);
 }
 
 .page-prev {
 	margin-right: 20px;
-	opacity: 0.2;
 }
 
 .page-next {
 	margin-right: 20px;
 }
 
-.page-next:hover,
-.page-next:focus {
+.page-next-icon:hover,
+.page-next-icon:focus {
 	opacity: 0.6;
 }
 
